@@ -48,6 +48,14 @@
   margin-bottom: 40px;
   display: flex;
   align-items: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.timeline-item.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .timeline-item:nth-child(odd) {
@@ -91,11 +99,25 @@
   max-width: 300px;
 }
 
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.timeline-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0);
+  flex-shrink: 0;
+}
+
 .timeline-content h3 {
   font-family: var(--font-title);
   color: var(--color-navy);
   font-size: 1.4rem;
-  margin: 0 0 8px 0;
+  margin: 0;
 }
 
 .timeline-content p {
