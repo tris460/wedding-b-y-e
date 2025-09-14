@@ -58,7 +58,7 @@
         </div>
       </div>
       
-      <div class="form-group" *ngIf="formData.attending">
+      <div class="form-group" *ngIf="formData.attending === 'true'">
         <label for="guests">Número de invitados (incluyéndote)</label>
         <select 
           id="guests" 
@@ -86,11 +86,9 @@
         ></textarea>
       </div>
       
-      <button type="submit" class="submit-btn" [disabled]="!isFormValid()" #submitButton>
+      <button type="submit" class="submit-btn" [disabled]="!isFormValid()">
         Confirmar respuesta
       </button>
     </form>
-    
-    <div class="hearts-container" #heartsContainer></div>
   </div>
 </section>
