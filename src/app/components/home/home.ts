@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +6,17 @@ import { Component } from '@angular/core';
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
-export class Home {
-
+export class Home implements AfterViewInit {
+  ngAfterViewInit() {
+    const img = document.querySelector('.main-image') as HTMLImageElement;
+    if (img) {
+      if (img.complete) {
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', () => {
+          img.classList.add('loaded');
+        });
+      }
+    }
+  }
 }
