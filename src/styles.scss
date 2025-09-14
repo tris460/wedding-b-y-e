@@ -1,8 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --color-silver: #C0C0C0;
   --color-navy: #0F2040;
   --color-white: #FFFFFF;
   --color-black: #000000;
+  
+  --font-title: "Dancing Script", cursive;
+  --font-text: "Raleway", sans-serif;
 }

@@ -7,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrl: './header.scss'
 })
 export class Header {
+  isMenuOpen = false;
 
+  toggleTheme() {
+    document.body.classList.toggle('dark-theme');
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
 }

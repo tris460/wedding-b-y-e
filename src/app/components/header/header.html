@@ -1,1 +1,29 @@
-<p>header works!</p>
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <h1>Bety & Erick</h1>
+    </div>
+    
+    <div class="header-actions">
+      <button class="menu-toggle" [class.menu-open]="isMenuOpen" (click)="toggleMenu()">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </div>
+  
+  <nav class="nav" [class.nav-open]="isMenuOpen">
+    <a href="#home" (click)="closeMenu()">Inicio</a>
+    <a href="#details" (click)="closeMenu()">Detalles</a>
+    <a href="#itinerary" (click)="closeMenu()">Itinerario</a>
+    <a href="#location" (click)="closeMenu()">Ubicación</a>
+    <a href="#rsvp" (click)="closeMenu()">RSVP</a>
+    <a href="#registry" (click)="closeMenu()">Regalos</a>
+    <a href="#gallery" (click)="closeMenu()">Galería</a>
+    <a href="#contact" (click)="closeMenu()">Contacto</a>
+    <div class="heart-icon">♡</div>
+  </nav>
+</header>
+
+<div class="overlay" [class.overlay-open]="isMenuOpen" (click)="closeMenu()"></div>
