@@ -13,11 +13,13 @@ export class Rsvp {
   formData = {
     name: '',
     attending: null as string | null,
-    guests: 1,
+    guests: null as string | null,
     message: ''
   };
   
   showErrors = false;
+  showConfirmation = false;
+  isLoading = false;
 
   onSubmit() {
     this.showErrors = true;
@@ -25,11 +27,10 @@ export class Rsvp {
     // Validar campos requeridos
     const isNameValid = this.formData.name && this.formData.name.trim() !== '';
     const isAttendingValid = this.formData.attending !== null;
-    const isGuestsValid = !this.formData.attending || this.formData.guests;
+    const isGuestsValid = this.formData.attending !== 'true' || !!this.formData.guests;
 
     if (isNameValid && isAttendingValid && isGuestsValid) {
-      this.resetForm();
-      // Aquí se puede agregar lógica para enviar los datos
+      this.sendToGoogleSheets();
     }
   }
   
@@ -49,10 +50,11 @@ export class Rsvp {
     this.formData = {
       name: '',
       attending: null,
-      guests: 1,
+      guests: null,
       message: ''
     };
     this.showErrors = false;
+    this.showConfirmation = false;
   }
   
   isFormValid(): boolean {
@@ -61,6 +63,40 @@ export class Rsvp {
     const isGuestsValid = this.formData.attending !== 'true' || !!this.formData.guests;
     
     return isNameValid && isAttendingValid && isGuestsValid;
+  }
+  
+  sendToGoogleSheets(): void {
+    this.isLoading = true;
+    
+    const baseUrl = 'https://script.google.com/macros/s/AKfycbz256hgQax49klnR76Df_DebefOqvU5Epjxq-bbVTa7HeI07TiRl4iPU9mJ4RpzMxrLOg/exec';
+    
+    const params = new URLSearchParams({
+      nombre: this.formData.name,
+      asistencia: this.formData.attending === 'true' ? 'Sí' : 'No',
+      invitados: this.formData.attending === 'true' ? this.formData.guests || '1' : '0',
+      mensaje: this.formData.message || 'Sin mensaje',
+      fecha: new Date().toLocaleString('es-MX')
+    });
+    
+    const webhookUrl = `${baseUrl}?${params.toString()}`;
+    
+    fetch(webhookUrl, {
+      method: 'GET',
+      mode: 'no-cors'
+    })
+    .then(() => {
+      setTimeout(() => {
+        this.isLoading = false;
+        this.showConfirmation = true;
+      }, 1500);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      setTimeout(() => {
+        this.isLoading = false;
+        this.showConfirmation = true;
+      }, 1500);
+    });
   }
   
 

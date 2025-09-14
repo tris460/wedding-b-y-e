@@ -3,7 +3,21 @@
     <h2>Confirma tu asistencia</h2>
     <p class="rsvp-intro">Tu presencia hará que este día sea aún más especial</p>
     
-    <form class="rsvp-form" (ngSubmit)="onSubmit()">
+    <div class="loading-message" *ngIf="isLoading">
+      <div class="spinner"></div>
+      <h3>Enviando tu respuesta...</h3>
+      <p>Por favor espera un momento</p>
+    </div>
+    
+    <div class="confirmation-message" *ngIf="showConfirmation">
+      <h3>¡Gracias por confirmar tu asistencia!</h3>
+      <p>Hemos recibido tu respuesta correctamente.</p>
+      <button class="submit-btn" (click)="resetForm()">
+        Enviar otra respuesta
+      </button>
+    </div>
+    
+    <form class="rsvp-form" (ngSubmit)="onSubmit()" *ngIf="!showConfirmation && !isLoading">
       <div class="form-group">
         <label for="name">Nombre completo</label>
         <input 
@@ -59,17 +73,35 @@
       </div>
       
       <div class="form-group" *ngIf="formData.attending === 'true'">
-        <label for="guests">Número de invitados (incluyéndote)</label>
-        <select 
-          id="guests" 
-          [(ngModel)]="formData.guests" 
-          name="guests"
-          [required]="formData.attending"
-          #guestsField="ngModel"
-        >
-          <option value="1">1 persona</option>
-          <option value="2">2 personas</option>
-        </select>
+        <label>Número de invitados (incluyéndote)</label>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input 
+              type="radio" 
+              [(ngModel)]="formData.guests" 
+              name="guests" 
+              value="1" 
+              required
+            >
+            <span class="radio-custom">
+              <img src="heart.svg" alt="" class="heart-icon">
+            </span>
+            1 persona
+          </label>
+          <label class="radio-option">
+            <input 
+              type="radio" 
+              [(ngModel)]="formData.guests" 
+              name="guests" 
+              value="2" 
+              required
+            >
+            <span class="radio-custom">
+              <img src="heart.svg" alt="" class="heart-icon">
+            </span>
+            2 personas
+          </label>
+        </div>
         <div class="error-message" *ngIf="isGuestsInvalid()">
           Este campo es obligatorio
         </div>
