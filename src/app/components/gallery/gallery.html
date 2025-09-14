@@ -1,1 +1,41 @@
-<p>gallery works!</p>
+<section id="gallery" class="gallery-section">
+  <div class="container">
+    <h2>Nuestra historia</h2>
+    <p class="gallery-intro">Algunos momentos especiales que hemos compartido juntos</p>
+    
+    <div class="gallery-container">
+      <div class="gallery-slide" [ngClass]="getSlideClass(0)">
+        <img src="ny.jpeg" alt="Nueva York" class="gallery-image">
+        <div class="slide-caption">
+          <h3>Nueva York</h3>
+          <p>Donde comenzó nuestra aventura</p>
+        </div>
+      </div>
+      
+      <div class="gallery-slide" [ngClass]="getSlideClass(1)">
+        <img src="rd.jpeg" alt="República Dominicana" class="gallery-image">
+        <div class="slide-caption">
+          <h3>República Dominicana</h3>
+          <p>Momentos inolvidables en el Caribe</p>
+        </div>
+      </div>
+      
+      <div class="gallery-slide" [ngClass]="getSlideClass(2)">
+        <img src="colombia.jpg" alt="Colombia" class="gallery-image">
+        <div class="slide-caption">
+          <h3>Colombia</h3>
+          <p>Descubriendo nuevos lugares juntos</p>
+        </div>
+      </div>
+      
+      <button class="nav-btn prev-btn" (click)="previousSlide()">‹</button>
+      <button class="nav-btn next-btn" (click)="nextSlide()">›</button>
+      
+      <div class="dots-container">
+        <span class="dot" [class.active]="currentSlide === 0" (click)="goToSlide(0)"></span>
+        <span class="dot" [class.active]="currentSlide === 1" (click)="goToSlide(1)"></span>
+        <span class="dot" [class.active]="currentSlide === 2" (click)="goToSlide(2)"></span>
+      </div>
+    </div>
+  </div>
+</section>

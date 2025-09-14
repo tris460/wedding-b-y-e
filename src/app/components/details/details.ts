@@ -16,7 +16,7 @@ export class Details implements AfterViewInit {
     this.audio = new Audio('Sweet Child O Mine.mp3');
     this.audio.loop = true;
     this.audio.volume = 0.5;
-    this.audio.currentTime = 8;
+    this.audio.currentTime = 14;
     
     this.updateCountdown();
     setInterval(() => this.updateCountdown(), 1000);
