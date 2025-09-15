@@ -1,1 +1,60 @@
-<p>registry works!</p>
+<section class="registry-section">
+    <h2 class="registry-title">Mesa de Regalos</h2>
+    
+    <div class="message-section">
+      <p class="welcome-message">
+        Si deseas contribuir a nuestro futuro juntos, hemos preparado estas opciones para ti.
+      </p>
+      <p class="gratitude-message">
+        ¡Cualquier aporte será recibido con mucho amor y gratitud!
+      </p>
+    </div>
+
+    <div class="tabs-container">
+      <div class="card-navigation">
+        <button class="nav-arrow left" (click)="previousTab()">
+          &#8249;
+        </button>
+        
+        <div class="card-info" [class.transitioning]="isTransitioning">
+          <div class="bank-section">
+            <img [src]="cards[activeTab].bankImage" [alt]="cards[activeTab].bankName" class="bank-logo">
+            <h3>Información Bancaria</h3>
+          </div>
+          
+          <div class="card-details">
+            <div class="detail-item">
+              <span class="label">Titular:</span>
+              <div class="value-container">
+                <span class="value">{{ cards[activeTab].holder }}</span>
+                <button class="copy-btn" (click)="copyToClipboard(cards[activeTab].holder)">
+                  <img src="copy.png" alt="Copiar" class="copy-icon">
+                </button>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="label">Número de Tarjeta:</span>
+              <div class="value-container">
+                <span class="value card-number">{{ cards[activeTab].number }}</span>
+                <button class="copy-btn" (click)="copyToClipboard(cards[activeTab].number)">
+                  <img src="copy.png" alt="Copiar" class="copy-icon">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <button class="nav-arrow right" (click)="nextTab()">
+          &#8250;
+        </button>
+      </div>
+    </div>
+
+    <div class="thank-you">
+      <p>¡Gracias por ser parte de nuestro día especial!</p>
+    </div>
+    
+    <div class="copy-toast" [class.show]="showCopyMessage">
+      ¡Texto copiado correctamente!
+    </div>
+</section>
