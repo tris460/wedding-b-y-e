@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,8 +7,29 @@ import { CommonModule } from '@angular/common';
   templateUrl: './gallery.html',
   styleUrl: './gallery.scss'
 })
-export class Gallery {
+export class Gallery implements OnInit, OnDestroy {
   currentSlide = 0;
+  private autoSlideInterval: any;
+
+  ngOnInit() {
+    this.startAutoSlide();
+  }
+
+  ngOnDestroy() {
+    this.stopAutoSlide();
+  }
+
+  private startAutoSlide() {
+    this.autoSlideInterval = setInterval(() => {
+      this.nextSlide();
+    }, 4000);
+  }
+
+  private stopAutoSlide() {
+    if (this.autoSlideInterval) {
+      clearInterval(this.autoSlideInterval);
+    }
+  }
 
   nextSlide() {
     this.currentSlide = (this.currentSlide + 1) % 3;
