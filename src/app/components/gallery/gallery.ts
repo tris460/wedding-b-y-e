@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,12 +7,28 @@ import { CommonModule } from '@angular/common';
   templateUrl: './gallery.html',
   styleUrl: './gallery.scss'
 })
-export class Gallery implements OnInit, OnDestroy {
+export class Gallery implements OnInit, OnDestroy, AfterViewInit {
   currentSlide = 0;
   private autoSlideInterval: any;
 
   ngOnInit() {
     this.startAutoSlide();
+  }
+
+  ngAfterViewInit() {
+    const galleryContainer = document.querySelector('.gallery-container') as HTMLElement;
+    if (galleryContainer) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            galleryContainer.classList.add('loaded');
+            observer.unobserve(galleryContainer);
+          }
+        });
+      }, { threshold: 0.3 });
+      
+      observer.observe(galleryContainer);
+    }
   }
 
   ngOnDestroy() {

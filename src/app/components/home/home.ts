@@ -8,15 +8,11 @@ import { Component, AfterViewInit } from '@angular/core';
 })
 export class Home implements AfterViewInit {
   ngAfterViewInit() {
-    const img = document.querySelector('.main-image') as HTMLImageElement;
-    if (img) {
-      if (img.complete) {
+    setTimeout(() => {
+      const img = document.querySelector('.main-image') as HTMLImageElement;
+      if (img) {
         img.classList.add('loaded');
-      } else {
-        img.addEventListener('load', () => {
-          img.classList.add('loaded');
-        });
       }
-    }
+    }, 100);
   }
 }

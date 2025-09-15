@@ -35,6 +35,14 @@
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(50px) scale(0.9);
+  transition: all 0.8s ease-out;
+}
+
+.gallery-container.loaded {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .gallery-slide {

@@ -23,6 +23,19 @@
   opacity: 0.8;
 }
 
+.faq-ring {
+  width: 90%;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(50px) scale(0.9);
+  transition: all 0.8s ease-out;
+}
+
+.faq-ring.loaded {
+  opacity: 0.9;
+  transform: translateY(0) scale(1);
+}
+
 .faq-message p {
   font-family: var(--font-text);
   color: var(--color-black);
