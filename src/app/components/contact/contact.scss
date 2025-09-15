@@ -19,6 +19,14 @@
   margin: 0 0 40px 0;
 }
 
+.contact-name {
+  font-family: var(--font-text);
+  color: var(--color-black);
+  font-size: 1rem;
+  font-weight: 300;
+  margin: -20px 0 20px 0;
+}
+
 .contact-content {
   display: flex;
   justify-content: center;
