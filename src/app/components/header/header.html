@@ -14,13 +14,13 @@
   </div>
   
   <nav class="nav" [class.nav-open]="isMenuOpen">
-    <a href="#home" (click)="closeMenu()">Inicio</a>
-    <a href="#details" (click)="closeMenu()">Detalles</a>
-    <a href="#itinerary" (click)="closeMenu()">Itinerario</a>
-    <a href="#location" (click)="closeMenu()">Ubicación</a>
-    <a href="#rsvp" (click)="closeMenu()">Reservar</a>
-    <a href="#registry" (click)="closeMenu()">Regalos</a>
-    <a href="#contact" (click)="closeMenu()">Contacto</a>
+    <a href="#home" (click)="scrollTo('home')">Inicio</a>
+    <a href="#details" (click)="scrollTo('details')">Detalles</a>
+    <a href="#location" (click)="scrollTo('location')">Ubicación</a>
+    <a href="#dress-code" (click)="scrollTo('dress-code')">Para tomar en cuenta</a>
+    <a href="#registry" (click)="scrollTo('registry')">Regalos</a>
+    <a href="#rsvp" (click)="scrollTo('rsvp')">Confirmar asistencia</a>
+    <a href="#contact" (click)="scrollTo('contact')">Contacto</a>
     <div class="heart-icon">♡</div>
   </nav>
 </header>

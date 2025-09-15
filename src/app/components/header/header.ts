@@ -20,4 +20,12 @@ export class Header {
   closeMenu() {
     this.isMenuOpen = false;
   }
+
+  scrollTo(sectionId: string) {
+    this.closeMenu();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
