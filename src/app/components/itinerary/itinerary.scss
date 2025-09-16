@@ -293,6 +293,14 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .hearts-decoration {
+    max-width: 1200px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
