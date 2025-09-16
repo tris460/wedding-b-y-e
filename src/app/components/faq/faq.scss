@@ -1,7 +1,26 @@
 .faq {
-  background-color: var(--color-white);
+  position: relative;
+  background-color: var(--color-silver);
   padding: 35px 20px;
   text-align: center;
+}
+
+.wave-bottom {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 5;
+}
+
+.wave-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+  fill: var(--color-silver);
 }
 
 .faq h2 {
