@@ -53,6 +53,7 @@
 .faq-ring.loaded {
   opacity: 0.9;
   transform: translateY(0) scale(1);
+  max-width: 350px;
 }
 
 .faq-message p {

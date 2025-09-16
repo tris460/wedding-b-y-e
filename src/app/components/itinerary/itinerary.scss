@@ -221,14 +221,6 @@
   transform: translateY(0);
 }
 
-.timeline-item:nth-child(odd) {
-  flex-direction: row;
-}
-
-.timeline-item:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
 .timeline-time {
   font-family: var(--font-text);
   font-size: 1.2rem;
@@ -289,6 +281,16 @@
   font-size: 0.95rem;
   margin: 0;
   line-height: 1.5;
+}
+
+@media (min-width: 769px) {
+  .timeline::before {
+    left: 36.5%;
+  }
+  
+  .timeline-item {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
