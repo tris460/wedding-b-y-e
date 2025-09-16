@@ -6,7 +6,6 @@
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(15, 32, 64, 0.1);
   width: 100%;
-  max-width: 1200px;
   margin: 0;
   padding: 0;
 }
@@ -101,12 +100,12 @@
   transform: translateX(-50%);
   width: calc(100% - 30px);
   height: 2px;
-  background: radial-gradient(ellipse at center, var(--color-silver), color-mix(in srgb, var(--color-silver) 30%, transparent) 70%);
+  background: radial-gradient(ellipse at center, var(--color-navy), color-mix(in srgb, var(--color-silver) 30%, transparent) 70%);
   box-shadow: 0 2px 4px color-mix(in srgb, var(--color-silver) 40%, transparent);
 }
 
 .nav a:hover {
-  color: var(--color-silver);
+  color: var(--color-navy);
 }
 
 .heart-icon {
@@ -153,7 +152,7 @@
   position: absolute;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 813px) {
   .menu-toggle {
     display: none;
   }
@@ -189,16 +188,9 @@
     box-shadow: none;
     white-space: nowrap;
   }
-  
+
   .nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-silver);
-    transition: width 0.3s ease;
+    display: none;
   }
   
   .nav a:hover::after {
@@ -216,13 +208,18 @@
   }
 
   .nav {
-    gap: 10px;
+    gap: 5px;
     flex-wrap: nowrap;
+    margin-left: 20px;
   }
   
   .nav a {
     font-size: 0.9rem;
     padding: 5px 10px;
+  }
+
+  .logo {
+    display: flex;
   }
 }
 

@@ -2,6 +2,17 @@
   <div class="container">
     <div class="logo">
       <h1>Bety & Erick</h1>
+
+      <nav class="nav" [class.nav-open]="isMenuOpen">
+        <a href="#home" (click)="scrollTo('home')">Inicio</a>
+        <a href="#details" (click)="scrollTo('details')">Detalles</a>
+        <a href="#location" (click)="scrollTo('location')">Ubicación</a>
+        <a href="#dress-code" (click)="scrollTo('dress-code')">Para tomar en cuenta</a>
+        <a href="#registry" (click)="scrollTo('registry')">Regalos</a>
+        <a href="#rsvp" (click)="scrollTo('rsvp')">Confirmar asistencia</a>
+        <a href="#contact" (click)="scrollTo('contact')">Contacto</a>
+        <div class="heart-icon">♡</div>
+      </nav>
     </div>
     
     <div class="header-actions">
@@ -12,17 +23,6 @@
       </button>
     </div>
   </div>
-  
-  <nav class="nav" [class.nav-open]="isMenuOpen">
-    <a href="#home" (click)="scrollTo('home')">Inicio</a>
-    <a href="#details" (click)="scrollTo('details')">Detalles</a>
-    <a href="#location" (click)="scrollTo('location')">Ubicación</a>
-    <a href="#dress-code" (click)="scrollTo('dress-code')">Para tomar en cuenta</a>
-    <a href="#registry" (click)="scrollTo('registry')">Regalos</a>
-    <a href="#rsvp" (click)="scrollTo('rsvp')">Confirmar asistencia</a>
-    <a href="#contact" (click)="scrollTo('contact')">Contacto</a>
-    <div class="heart-icon">♡</div>
-  </nav>
 </header>
 
 <div class="overlay" [class.overlay-open]="isMenuOpen" (click)="closeMenu()"></div>
