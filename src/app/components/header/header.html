@@ -4,13 +4,17 @@
       <h1>Bety & Erick</h1>
 
       <nav class="nav" [class.nav-open]="isMenuOpen">
-        <a href="#home" (click)="scrollTo('home')">Inicio</a>
-        <a href="#details" (click)="scrollTo('details')">Detalles</a>
-        <a href="#location" (click)="scrollTo('location')">Ubicación</a>
-        <a href="#dress-code" (click)="scrollTo('dress-code')">Para tomar en cuenta</a>
-        <a href="#registry" (click)="scrollTo('registry')">Regalos</a>
-        <a href="#rsvp" (click)="scrollTo('rsvp')">Confirmar asistencia</a>
-        <a href="#contact" (click)="scrollTo('contact')">Contacto</a>
+        <a href="#home" (click)="scrollTo('home')">{{ translationService.translate('nav.home') }}</a>
+        <a href="#details" (click)="scrollTo('details')">{{ translationService.translate('nav.details') }}</a>
+        <a href="#location" (click)="scrollTo('location')">{{ translationService.translate('nav.location') }}</a>
+        <a href="#dress-code" (click)="scrollTo('dress-code')">{{ translationService.translate('nav.dress-code') }}</a>
+        <a href="#registry" (click)="scrollTo('registry')">{{ translationService.translate('nav.registry') }}</a>
+        <a href="#rsvp" (click)="scrollTo('rsvp')">{{ translationService.translate('nav.rsvp') }}</a>
+        <a href="#contact" (click)="scrollTo('contact')">{{ translationService.translate('nav.contact') }}</a>
+        <div class="language-buttons">
+          <button class="lang-btn" [class.active]="translationService.getCurrentLanguage() === 'es'" (click)="changeLanguage('es')">🇲🇽 Esp</button>
+          <button class="lang-btn" [class.active]="translationService.getCurrentLanguage() === 'en'" (click)="changeLanguage('en')">🇺🇸 Eng</button>
+        </div>
         <div class="heart-icon">♡</div>
       </nav>
     </div>
