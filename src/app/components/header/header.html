@@ -4,13 +4,13 @@
       <h1>Bety & Erick</h1>
 
       <nav class="nav" [class.nav-open]="isMenuOpen">
-        <a href="#home" (click)="scrollTo('home')">{{ translationService.translate('nav.home') }}</a>
-        <a href="#details" (click)="scrollTo('details')">{{ translationService.translate('nav.details') }}</a>
-        <a href="#location" (click)="scrollTo('location')">{{ translationService.translate('nav.location') }}</a>
-        <a href="#dress-code" (click)="scrollTo('dress-code')">{{ translationService.translate('nav.dress-code') }}</a>
-        <a href="#registry" (click)="scrollTo('registry')">{{ translationService.translate('nav.registry') }}</a>
-        <a href="#rsvp" (click)="scrollTo('rsvp')">{{ translationService.translate('nav.rsvp') }}</a>
-        <a href="#contact" (click)="scrollTo('contact')">{{ translationService.translate('nav.contact') }}</a>
+        <a href="#home" (click)="scrollTo('home')">{{ 'nav.home' | translate }}</a>
+        <a href="#details" (click)="scrollTo('details')">{{ 'nav.details' | translate }}</a>
+        <a href="#location" (click)="scrollTo('location')">{{ 'nav.location' | translate }}</a>
+        <a href="#dress-code" (click)="scrollTo('dress-code')">{{ 'nav.dress-code' | translate }}</a>
+        <a href="#registry" (click)="scrollTo('registry')">{{ 'nav.registry' | translate }}</a>
+        <a href="#rsvp" (click)="scrollTo('rsvp')">{{ 'nav.rsvp' | translate }}</a>
+        <a href="#contact" (click)="scrollTo('contact')">{{ 'nav.contact' | translate }}</a>
         <div class="language-buttons">
           <button class="lang-btn" [class.active]="translationService.getCurrentLanguage() === 'es'" (click)="changeLanguage('es')">🇲🇽 Esp</button>
           <button class="lang-btn" [class.active]="translationService.getCurrentLanguage() === 'en'" (click)="changeLanguage('en')">🇺🇸 Eng</button>

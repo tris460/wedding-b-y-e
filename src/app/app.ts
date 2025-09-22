@@ -12,6 +12,7 @@ import { Gallery } from './components/gallery/gallery';
 import { DressCode } from './components/dress-code/dress-code';
 import { Faq } from './components/faq/faq';
 import { Contact } from './components/contact/contact';
+import { TranslatePipe } from './pipes/translate.pipe';
 
 @Component({
   selector: 'app-root',
@@ -28,7 +29,8 @@ import { Contact } from './components/contact/contact';
     Gallery,
     DressCode,
     Faq,
-    Contact
+    Contact,
+    TranslatePipe
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

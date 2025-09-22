@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { TranslationService } from '../../services/translation.service';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })

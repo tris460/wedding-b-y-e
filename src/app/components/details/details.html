@@ -13,38 +13,38 @@
         {{ isPlaying ? '||' : '▶' }}
       </span>
     </button>
-    <span class="music-label">Nuestra canción</span>
+    <span class="music-label">{{ 'details.our-song' | translate }}</span>
   </div>
   
   <div class="details-content">
-    <h2>¡Nos casamos!</h2>
-    <p class="invitation-text">Con gran alegría queremos compartir contigo este momento tan especial</p>
+    <h2>{{ 'home.title' | translate }}</h2>
+    <p class="invitation-text">{{ 'details.description' | translate}}</p>
     
     <div class="wedding-date">
-      <h3>17 de Octubre de 2026</h3>
+      <h3>{{ 'details.date' | translate }}</h3>
       <p class="wedding-time">7:00 PM</p>
     </div>
     
     <div class="countdown">
       <div class="countdown-item">
         <span class="countdown-number">{{ countdown.days }}</span>
-        <span class="countdown-label">Días</span>
+        <span class="countdown-label">{{ 'details.days' | translate }}</span>
       </div>
       <div class="countdown-item">
         <span class="countdown-number">{{ countdown.hours }}</span>
-        <span class="countdown-label">Horas</span>
+        <span class="countdown-label">{{ 'details.time' | translate }}</span>
       </div>
       <div class="countdown-item">
         <span class="countdown-number">{{ countdown.minutes }}</span>
-        <span class="countdown-label">Minutos</span>
+        <span class="countdown-label">{{ 'details.minutes' | translate }}</span>
       </div>
       <div class="countdown-item">
         <span class="countdown-number">{{ countdown.seconds }}</span>
-        <span class="countdown-label">Segundos</span>
+        <span class="countdown-label">{{ 'details.seconds' | translate }}</span>
       </div>
     </div>
     
-    <p class="save-date">¡Reserva la fecha y acompáñanos en este día tan especial!</p>
+    <p class="save-date">{{ 'details.text' | translate }}</p>
   </div>
   
   <div class="rings-section">

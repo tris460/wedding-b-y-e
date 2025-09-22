@@ -1,8 +1,9 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
