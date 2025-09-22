@@ -51,6 +51,9 @@ export class TranslationService {
       'gallery.rd.description': 'Momentos inolvidables en el Caribe',
       'gallery.co.title': 'Colombia',
       'gallery.co.description': 'Descubriendo nuevos lugares juntos',
+      'dress-code.title': 'Para tomar en cuenta',
+      'dress-code.subtitle': 'Atuendo Formal',
+      'dress-code.description': 'Con mucho cariño, les pedimos que el color blanco sea exclusivo para la novia en este día tan especial.',
     },
     en: {
       'nav.home': 'Home',
@@ -90,6 +93,9 @@ export class TranslationService {
       'gallery.rd.description': 'Unforgettable moments in the Caribbean',
       'gallery.co.title': 'Colombia',
       'gallery.co.description': 'Discovering new places together',
+      'dress-code.title': 'To take into account',
+      'dress-code.subtitle': 'Formal Attire',
+      'dress-code.description': 'With much affection, we kindly ask that the color white be exclusive to the bride on this very special day.',
     }
   };
 
