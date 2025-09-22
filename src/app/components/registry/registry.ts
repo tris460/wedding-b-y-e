@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-registry',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './registry.html',
   styleUrl: './registry.scss'
 })

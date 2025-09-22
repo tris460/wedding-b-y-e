@@ -58,6 +58,14 @@ export class TranslationService {
       'faq.kids2': 'Deseamos que esta decisión no les impida asistir y celebrar nuestro día.',
       'faq.phone1': 'Queremos que vivas este momento con nosotros, no a través de una pantalla.',
       'faq.phone2': 'Por favor, guarda tu celular y disfruta con el corazón.',
+      'gifts.title': 'Mesa de regalos',
+      'gifts.description': 'Si deseas contribuir a nuestro futuro juntos, hemos preparado estas opciones para ti.',
+      'gifts.note': '¡Cualquier aporte será recibido con mucho amor y gratitud!',
+      'gifts.bank.title': 'Información Bancaria',
+      'gifts.bank.name': 'Titular:',
+      'gifts.bank.number': 'Número de Tarjeta:',
+      'gifts.thanks': '¡Gracias por ser parte de nuestro día especial!',
+      'gifts.copy': '¡Texto copiado correctamente!',
     },
     en: {
       'nav.home': 'Home',
@@ -104,6 +112,14 @@ export class TranslationService {
       'faq.kids2': 'We hope this decision does not prevent you from attending and celebrating our day.',
       'faq.phone1': 'We want you to experience this moment with us, not through a screen.',
       'faq.phone2': 'Please, put away your cell phone and enjoy with your heart.',
+      'gifts.title': 'Gift Registry',
+      'gifts.description': 'If you wish to contribute to our future together, we have prepared these options for you.',
+      'gifts.note': 'Any contribution will be received with much love and gratitude!',
+      'gifts.bank.title': 'Bank Information',
+      'gifts.bank.name': 'Holder:',
+      'gifts.bank.number': 'Card Number:',
+      'gifts.thanks': 'Thank you for being part of our special day!',
+      'gifts.copy': 'Text copied successfully!',
     }
   };
 

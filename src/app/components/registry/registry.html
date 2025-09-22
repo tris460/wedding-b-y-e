@@ -1,12 +1,12 @@
 <section id="registry" class="registry-section">
-    <h2 class="registry-title">Mesa de regalos</h2>
+    <h2 class="registry-title">{{ 'gifts.title' | translate }}</h2>
     
     <div class="message-section">
       <p class="welcome-message">
-        Si deseas contribuir a nuestro futuro juntos, hemos preparado estas opciones para ti.
+        {{ 'gifts.description' | translate}}
       </p>
       <p class="gratitude-message">
-        ¡Cualquier aporte será recibido con mucho amor y gratitud!
+        {{ 'gifts.note' | translate }}
       </p>
     </div>
 
@@ -19,12 +19,12 @@
         <div class="card-info" [class.transitioning]="isTransitioning">
           <div class="bank-section">
             <img [src]="cards[activeTab].bankImage" [alt]="cards[activeTab].bankName" class="bank-logo">
-            <h3>Información Bancaria</h3>
+            <h3>{{ 'gifts.bank.title' | translate }}</h3>
           </div>
           
           <div class="card-details">
             <div class="detail-item">
-              <span class="label">Titular:</span>
+              <span class="label">{{ 'gifts.bank.name' | translate }}</span>
               <div class="value-container">
                 <span class="value">{{ cards[activeTab].holder }}</span>
                 <button class="copy-btn" (click)="copyToClipboard(cards[activeTab].holder)">
@@ -33,7 +33,7 @@
               </div>
             </div>
             <div class="detail-item">
-              <span class="label">Número de Tarjeta:</span>
+              <span class="label">{{ 'gifts.bank.number' | translate }}</span>
               <div class="value-container">
                 <span class="value card-number">{{ cards[activeTab].number }}</span>
                 <button class="copy-btn" (click)="copyToClipboard(cards[activeTab].number)">
@@ -51,10 +51,10 @@
     </div>
 
     <div class="thank-you">
-      <p>¡Gracias por ser parte de nuestro día especial!</p>
+      <p>{{ 'gifts.thanks' | translate }}</p>
     </div>
     
     <div class="copy-toast" [class.show]="showCopyMessage">
-      ¡Texto copiado correctamente!
+      {{ 'gifts.copy' | translate }}
     </div>
 </section>
