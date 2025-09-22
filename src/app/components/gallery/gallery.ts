@@ -1,9 +1,10 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-gallery',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './gallery.html',
   styleUrl: './gallery.scss'
 })

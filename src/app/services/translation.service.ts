@@ -45,6 +45,12 @@ export class TranslationService {
       'location.title': 'Ubicación',
       'location.description': 'Te esperamos en este hermoso lugar para celebrar juntos',
       'location.info': 'Estacionamiento disponible • Fácil acceso',
+      'gallery.ny.title': 'Nueva York',
+      'gallery.ny.description': 'Donde comenzó nuestra aventura',
+      'gallery.rd.title': 'República Dominicana',
+      'gallery.rd.description': 'Momentos inolvidables en el Caribe',
+      'gallery.co.title': 'Colombia',
+      'gallery.co.description': 'Descubriendo nuevos lugares juntos',
     },
     en: {
       'nav.home': 'Home',
@@ -78,6 +84,12 @@ export class TranslationService {
       'location.title': 'Location',
       'location.description': 'We await you at this beautiful place to celebrate together',
       'location.info': 'Parking available • Easy access',
+      'gallery.ny.title': 'New York',
+      'gallery.ny.description': 'Where our adventure began',
+      'gallery.rd.title': 'Dominican Republic',
+      'gallery.rd.description': 'Unforgettable moments in the Caribbean',
+      'gallery.co.title': 'Colombia',
+      'gallery.co.description': 'Discovering new places together',
     }
   };
 
