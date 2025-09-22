@@ -1,8 +1,9 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-itinerary',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './itinerary.html',
   styleUrl: './itinerary.scss'
 })
