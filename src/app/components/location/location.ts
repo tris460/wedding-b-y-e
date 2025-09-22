@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-location',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './location.html',
   styleUrl: './location.scss'
 })

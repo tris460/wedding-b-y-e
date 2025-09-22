@@ -42,6 +42,9 @@ export class TranslationService {
       'itinerary.drink.description': 'Celebremos juntos este nuevo capítulo',
       'itinerary.dance.title': '¡A bailar toda la noche!',
       'itinerary.dance.description': 'La pista es nuestra, ¡celebremos hasta el amanecer!',
+      'location.title': 'Ubicación',
+      'location.description': 'Te esperamos en este hermoso lugar para celebrar juntos',
+      'location.info': 'Estacionamiento disponible • Fácil acceso',
     },
     en: {
       'nav.home': 'Home',
@@ -72,6 +75,9 @@ export class TranslationService {
       'itinerary.drink.description': 'Celebrate our new chapter together',
       'itinerary.dance.title': 'Dance all night long!',
       'itinerary.dance.description': 'The dance floor is ours, let’s celebrate until dawn!',
+      'location.title': 'Location',
+      'location.description': 'We await you at this beautiful place to celebrate together',
+      'location.info': 'Parking available • Easy access',
     }
   };
 
