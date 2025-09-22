@@ -53,7 +53,11 @@ export class TranslationService {
       'gallery.co.description': 'Descubriendo nuevos lugares juntos',
       'dress-code.title': 'Para tomar en cuenta',
       'dress-code.subtitle': 'Atuendo Formal',
-      'dress-code.description': 'Con mucho cariño, les pedimos que el color blanco sea exclusivo para la novia en este día tan especial.',
+      'dress-code.description': 'Con mucho cariño, les pedimos que el color blanco sea EXCLUSIVO para la novia en este día tan especial.',
+      'faq.kids1': 'Aunque apreciamos a sus pequeños, hemos decidido celebrar este momento SIN niños.',
+      'faq.kids2': 'Deseamos que esta decisión no les impida asistir y celebrar nuestro día.',
+      'faq.phone1': 'Queremos que vivas este momento con nosotros, no a través de una pantalla.',
+      'faq.phone2': 'Por favor, guarda tu celular y disfruta con el corazón.',
     },
     en: {
       'nav.home': 'Home',
@@ -95,7 +99,11 @@ export class TranslationService {
       'gallery.co.description': 'Discovering new places together',
       'dress-code.title': 'To take into account',
       'dress-code.subtitle': 'Formal Attire',
-      'dress-code.description': 'With much affection, we kindly ask that the color white be exclusive to the bride on this very special day.',
+      'dress-code.description': 'With much affection, we kindly ask that the color white be EXCLUSIVE to the bride on this very special day.',
+      'faq.kids1': 'Although we appreciate your little ones, we have decided to celebrate this moment WITHOUT children.',
+      'faq.kids2': 'We hope this decision does not prevent you from attending and celebrating our day.',
+      'faq.phone1': 'We want you to experience this moment with us, not through a screen.',
+      'faq.phone2': 'Please, put away your cell phone and enjoy with your heart.',
     }
   };
 

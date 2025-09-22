@@ -1,8 +1,9 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-faq',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './faq.html',
   styleUrl: './faq.scss'
 })
