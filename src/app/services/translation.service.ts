@@ -90,6 +90,14 @@ export class TranslationService {
       'contact.bride': 'Novia',
       'contact.groom': 'Novio',
       'contact.bridesmaid': 'Dama',
+      'footer.note': 'Celebrando nuestro amor',
+      'footer.info': 'Información',
+      'footer.date': 'Fecha: 17 de Octubre de 2026',
+      'footer.place': 'Lugar:',
+      'footer.contact': 'Contacto',
+      'footer.contact.subtitle': '¿Preguntas? Contáctanos',
+      'footer.love': 'Con amor, B & E',
+      'footer.rights': '2025 Bety & Erick - Nuestro día especial',
     },
     en: {
       'nav.home': 'Home',
@@ -168,6 +176,14 @@ export class TranslationService {
       'contact.bride': 'Bride',
       'contact.groom': 'Groom',
       'contact.bridesmaid': 'Bridesmaid',
+      'footer.note': 'Celebrating our love',
+      'footer.info': 'Information',
+      'footer.date': 'Date: October 17th, 2026',
+      'footer.place': 'Place:',
+      'footer.contact': 'Contact',
+      'footer.contact.subtitle': 'Questions? Contact us',
+      'footer.love': 'With love, B & E',
+      'footer.rights': '2025 Bety & Erick - Our special day',
     }
   };
 
