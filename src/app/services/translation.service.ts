@@ -85,6 +85,11 @@ export class TranslationService {
       'rsvp.message': 'Mensaje para los novios (opcional)',
       'rsvp.message.placeholder': 'Comparte tus buenos deseos...',
       'rsvp.confirm': 'Confirmar respuesta',
+      'contact.title': 'Contacto',
+      'contact.description': '¿Tienes alguna pregunta? No dudes en contactarnos',
+      'contact.bride': 'Novia',
+      'contact.groom': 'Novio',
+      'contact.bridesmaid': 'Dama',
     },
     en: {
       'nav.home': 'Home',
@@ -158,6 +163,11 @@ export class TranslationService {
       'rsvp.message': 'Message for the couple (optional)',
       'rsvp.message.placeholder': 'Share your wishes...',
       'rsvp.confirm': 'Confirm response',
+      'contact.title': 'Contact',
+      'contact.description': 'Do you have any questions? Feel free to contact us',
+      'contact.bride': 'Bride',
+      'contact.groom': 'Groom',
+      'contact.bridesmaid': 'Bridesmaid',
     }
   };
 
